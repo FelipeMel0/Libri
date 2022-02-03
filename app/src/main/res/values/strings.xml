@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Libri</string>
+    <string name="cadastroUsuarioTitulo">Cadastro de usuário</string>
+    <string name="txtNome">Nome</string>
+    <string name="txtSobrenome">Sobrenome</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtSenha">Senha</string>
+</resources>
