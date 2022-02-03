@@ -6,4 +6,7 @@
     <string name="txtEmail">Email</string>
     <string name="txtLogin">Login</string>
     <string name="txtSenha">Senha</string>
+    <string name="mensagem_cadastro_usuario">Você está cadastrando um usuário</string>
+    <string name="salvar">SALVAR</string>
+    <string name="cancelar">CANCELAR</string>
 </resources>

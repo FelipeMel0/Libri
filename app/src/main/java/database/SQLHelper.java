@@ -63,6 +63,8 @@ public class SQLHelper extends SQLiteOpenHelper {
 
         try {
 
+            sqLiteDatabase.beginTransaction();
+
             ContentValues values = new ContentValues();
 
             values.put("nome", nome);
