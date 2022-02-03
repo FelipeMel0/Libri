@@ -57,7 +57,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 
     public boolean addUser(String nome, String sobrenome, String email, String login, String senha, String created_date) {
 
-        /*Configura o SQLITE para escrita*/
+        //Configura o SQLITE para escrita:
 
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
@@ -74,6 +74,8 @@ public class SQLHelper extends SQLiteOpenHelper {
 
             sqLiteDatabase.insertOrThrow("tbl_usuario", null, values);
             sqLiteDatabase.setTransactionSuccessful();
+
+            return true;
 
         } catch (Exception e) {
 
