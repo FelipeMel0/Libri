@@ -57,6 +57,8 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
                         boolean cadastroUsuario = SQLHelper.getINSTANCE(this).addUser(nome, sobrenome, email, login, senha, "03/02/2022 00:00:00");
 
+                        //Opções de diálogo
+                        
                         if (cadastroUsuario){
                             Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show();
                         }else{
