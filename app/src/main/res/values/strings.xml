@@ -9,4 +9,9 @@
     <string name="mensagem_cadastro_usuario">Você está cadastrando um usuário</string>
     <string name="salvar">SALVAR</string>
     <string name="cancelar">CANCELAR</string>
+    <string name="cadastroLivroTitulo">Cadastro de livro</string>
+    <string name="txtNomeLivro">Nome do livro</string>
+    <string name="txtLivroDescricao">Descrição do livro</string>
+    <string name="txtLivroFoto">Foto</string>
+    <string name="mensagem_cadastro_livro">Você está cadastrando um livro</string>
 </resources>

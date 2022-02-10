@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/background_input.xml" value="0.7947916666666667" />
         <entry key="app/src/main/res/font/.xml" value="0.5510416666666667" />
+        <entry key="app/src/main/res/layout/activity_cadastro_livro.xml" value="0.45" />
         <entry key="app/src/main/res/layout/activity_cadastro_usuario.xml" value="0.5208333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
       </map>

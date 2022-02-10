@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroUsuarioActivity">
+    tools:context=".CadastroLivroActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,66 +12,50 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="center"
-        tools:context=".activity_cadastro_usuario">
+        tools:context=".CadastroLivroActivity">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/cabin"
-            android:text="@string/cadastroUsuarioTitulo"
+            android:text="@string/cadastroLivroTitulo"
             style="@style/textTitulo"/>
 
         <EditText
-            android:id="@+id/txtNome"
+            android:id="@+id/txtTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/cabin"
-            android:hint="@string/txtNome"
+            android:hint="@string/txtNomeLivro"
             android:inputType="text"
             android:textAlignment="viewStart"
             style="@style/editText"/>
 
         <EditText
-            android:id="@+id/txtSobrenome"
+            android:id="@+id/txtLivroDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtSobrenome"
+            android:fontFamily="@font/cabin"
+            android:hint="@string/txtLivroDescricao"
             android:inputType="text"
-            android:fontFamily="@font/cabin"
+            android:textAlignment="viewStart"
             style="@style/editText"/>
 
         <EditText
-            android:id="@+id/txtEmail"
+            android:id="@+id/txtLivroFoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtEmail"
-            android:inputType="textEmailAddress"
             android:fontFamily="@font/cabin"
-            style="@style/editText"/>
-
-        <EditText
-            android:id="@+id/txtLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/txtLogin"
+            android:hint="@string/txtLivroFoto"
             android:inputType="text"
-            android:fontFamily="@font/cabin"
-            style="@style/editText"/>
-
-        <EditText
-            android:id="@+id/txtSenha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/txtSenha"
-            android:inputType="textPassword"
-            android:fontFamily="@font/cabin"
+            android:textAlignment="viewStart"
             style="@style/editText"/>
 
         <Button
-            android:id="@+id/btnCadastrarUsuario"
+            android:id="@+id/btnCadastrarLivro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cadastrar usuário"
+            android:text="Cadastrar"
             android:fontFamily="@font/cabin"
             style="@style/btnForm"/>
 

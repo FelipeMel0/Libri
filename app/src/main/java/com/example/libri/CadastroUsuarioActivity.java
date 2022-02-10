@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import database.SQLHelper;
+import helpers.DateFormat;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
 
@@ -55,10 +56,15 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                         String login = txtLogin.getText().toString();
                         String senha = txtSenha.getText().toString();
 
-                        boolean cadastroUsuario = SQLHelper.getINSTANCE(this).addUser(nome, sobrenome, email, login, senha, "03/02/2022 00:00:00");
+                        // Data de inserção do usuário
+
+                        DateFormat df = new DateFormat();
+                        String created_date = df.getDateFormat();
+
+                        boolean cadastroUsuario = SQLHelper.getINSTANCE(this).addUser(nome, sobrenome, email, login, senha, created_date);
 
                         //Opções de diálogo
-                        
+
                         if (cadastroUsuario){
                             Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show();
                         }else{

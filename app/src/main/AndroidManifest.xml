@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Libri">
 <!--        <activity-->
-<!--            android:name=".CadastroUsuarioActivity"-->
+<!--            android:name=".CadastroLivroActivity"-->
 <!--            android:exported="false" />-->
+        <!-- <activity -->
+        <!-- android:name=".CadastroUsuarioActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
-            android:name=".CadastroUsuarioActivity"
+            android:name=".CadastroLivroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
