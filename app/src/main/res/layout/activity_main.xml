@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroUsuarioActivity">
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editText"
+        android:hint="@string/txtLogin"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/editText"
+        android:hint="@string/txtSenha"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btnForm"
+        android:text="@string/entrar"/>
+
+    <Button
+        android:id="@+id/btnCadastrarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btnForm"
+        android:text="Cadastrar"/>
+
+</LinearLayout>
