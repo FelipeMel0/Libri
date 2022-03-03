@@ -9,6 +9,12 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Item;
+import model.Livro;
+
 public class SQLHelper extends SQLiteOpenHelper {
 
     /* Atributos da classe de connection */
@@ -187,5 +193,55 @@ public class SQLHelper extends SQLiteOpenHelper {
 
     }
 
+    /*Listagem de livros*/
+    public List<Item> listBook(){
+
+        List<Item> items = new ArrayList<>();
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM tbl_livro " + "WHERE cod_usuario = ?", new String[]{"1"});
+
+        try {
+
+            if(cursor.moveToFirst()){
+
+                do{
+
+                    Livro livro = new Livro(
+                            cursor.getString(cursor.getColumnIndex("titulo")),
+                            cursor.getString(cursor.getColumnIndex("descricao"))
+                    );
+
+                    items.add(new Item(0, livro));
+
+
+
+                }
+                while (cursor.moveToNext());
+
+            }
+
+        }
+
+        catch (Exception e){
+
+            Log.d("SQLITEERROR: ", e.getMessage());
+
+        }
+
+        finally {
+
+            if(cursor != null && !cursor.isClosed()){
+
+                cursor.close();
+
+            }
+
+        }
+
+        return items;
+
+    }
 
 }
