@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         style="@style/editText"
         android:hint="@string/txtSenha"
-        android:inputType="text"/>
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnEntrar"

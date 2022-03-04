@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import database.SQLHelper;
 import model.Item;
 import model.Livro;
 
@@ -24,6 +26,13 @@ public class FeedLivroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_livro);
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+
+        List<Item> item = SQLHelper.getINSTANCE(this).listBook();
+
+        recyclerView.setAdapter(new LivroAdapter(item));
+
     }
 
     /* Inflate de menu */
@@ -80,7 +89,11 @@ public class FeedLivroActivity extends AppCompatActivity {
 
             if(viewType == 0){
 
-                return new LivroAdapter.LivroViewHolder();
+                return new LivroAdapter.LivroViewHolder(
+
+                        LayoutInflater.from(parent.getContext()).inflate(R.layout.item_container_livro, parent, false)
+
+                );
 
             }
 
@@ -90,11 +103,26 @@ public class FeedLivroActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) { //Associa os objetos da ViewHolder aos dados
 
+            if (getItemViewType(position) == 0){
+
+                Livro livro = (Livro) item.get(position).getObject();
+                ((LivroAdapter.LivroViewHolder) holder).setLivroData(livro);
+
+            }
+
+        }
+
+        /*Método auxiliar de manipulação de position para o método onBindViewHolder*/
+
+        public int getItemViewType(int position){
+            return item.get(position).getType();
         }
 
         @Override
         public int getItemCount() { //Quantidade de itens na contagem
-            return 0;
+
+            return item.size();
+
         }
 
         /*ViewHolder - Define as estruturas de interface. "Envelopa" as estruturas .xml*/
